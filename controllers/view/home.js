@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const { response } = require("express");
 const { Post, User } = require('../../models');
 
 router.get('/', async (req, res) => {
@@ -14,7 +15,7 @@ router.get('/', async (req, res) => {
 
         return {
           ...data,
-          isAuthor: data.user.id === userId,
+          isAuthor: data.user.id == userId,
         };
       });
   

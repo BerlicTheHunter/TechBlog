@@ -1,11 +1,11 @@
-// * Required Elements
+// * -----Required Elements----- * \\
 const Sequelize = require('sequelize');
 require('dotenv').config();
 
-// * Variables
+// * -----Variables----- * \\
 let sequelize;
 
-// * Initiate Connection to Database
+// * -----Initiate Connection to Database----- * \\
 if (process.env.JAWSDB_URL) {
   // for connection via Heroku
   sequelize = new Sequelize(process.env.JAWSDB_URL);
@@ -23,5 +23,5 @@ if (process.env.JAWSDB_URL) {
   );
 }
 
-// * Exports
+// * -----Exports----- * \\
 module.exports = sequelize;
