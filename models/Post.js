@@ -9,7 +9,9 @@ Post.init(
     content: DataTypes.TEXT
   },
   {
-    sequelize
+    sequelize,
+    modelName: 'posts',
+    underscored: true
   }
 );
 

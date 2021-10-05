@@ -12,7 +12,7 @@ Comment.init(
   },
   {
     sequelize,
-    modelName: 'comment',
+    modelName: 'comments',
     underscored: true,
   }
 );
