@@ -9,7 +9,7 @@ const authViewRoute = require("./view/auth");
 const blogViewRoute = require("./view/blog");
 // api route variables
 const authApiRoute = require("./api/auth");
-const blogApiRoute = require("./api/blog");
+const blogApiRoute = require("./api/blog.js");
 const commentApiRoute = require("./api/comment");
 
 // * -----Routes----- * \\
