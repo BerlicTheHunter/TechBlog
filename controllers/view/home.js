@@ -1,10 +1,8 @@
 const router = require("express").Router();
-const { response } = require("express");
 const { Post, User } = require('../../models');
 
 router.get('/', async (req, res) => {
-    const userId = 1;
-    
+        
     try {
       const postData = await Post.findAll({
         include: [User],
@@ -12,10 +10,9 @@ router.get('/', async (req, res) => {
   
       const blogs = postData.map((post) => {
         const data = post.get({ plain: true })
-
+        
         return {
           ...data,
-          isAuthor: data.user.id == userId,
         };
       });
   

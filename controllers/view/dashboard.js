@@ -4,20 +4,14 @@ const withAuth = require('../../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
   try {
-    const postData = await Post.findAll({
-      include: [User],
-    });
-
+    const postData = await Post.findAll({include: [User],});
+    
     const blogs = postData.map((post) => post.get({ plain: true }));
-
+    
     res.render("dashboard", {blogs})
   } catch (err) {
     res.status(500).json(err);
   }
-
-
-   
-    
     
 })
 

@@ -4,8 +4,7 @@ $("#login-form").submit(async (evt) => {
     evt.preventDefault();
     const email = document.querySelector("#user-email").value
     const password = document.querySelector("#user-password").value
-    console.log(email);
-    console.log(password);
+    
     try {
        const response = await fetch('/api/login', {
         method: 'POST',
